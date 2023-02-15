@@ -34,7 +34,7 @@ class PhoneNumber {
       }
       return PhoneNumber(
           countryISOCode: country.code,
-          countryCode: country.dialCode,
+          countryCode: "+${country.dialCode}",
           number: number);
     } on InvalidCharactersException {
       rethrow;
