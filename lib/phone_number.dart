@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'countries.dart';
 
 class NumberTooLongException implements Exception{}
@@ -56,6 +58,17 @@ class PhoneNumber {
   }
 
   String get completeNumber {
+    log("completeNumber $countryCode $number");
+
+    switch (countryCode) {
+      case "+66":
+        if(number.startsWith('0')){
+          return countryCode + number.substring(1);
+        }
+        break;
+      default:
+    }
+
     return countryCode + number;
   }
 
