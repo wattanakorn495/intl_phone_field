@@ -1757,7 +1757,7 @@ const List<Country> countries = [
     code: "TH",
     dialCode: "66",
     minLength: 9,
-    maxLength: 9,
+    maxLength: 10,
   ),
   Country(
     name: "Timor-Leste",
